@@ -7,7 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        * {margin: 0; padding: 0; box-sizing: border-box;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         :root {
             --button-height: 32px;
             --font-size: 14px;
@@ -18,18 +23,41 @@
             --border-color: #999;
             --border-color-hover: #666;
         }
+
         #app {
             margin: 20px;
         }
+
         body {
             font-size: var(--font-size);
         }
     </style>
+    <style type="text/css">
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-    <div id="app">
-        <w-button />
-    </div>
-    <script src="./src/app.js"></script>
+<div id="app">
+    <w-button icon="like" icon-position="">
+        按钮
+    </w-button>
+    <w-button icon="settings" icon-position="">
+        按钮
+    </w-button>
+    <w-button icon="download" icon-position="">
+        按钮
+    </w-button>
+    <w-button icon="down" icon-position="">
+        按钮
+    </w-button>
+</div>
+<script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_1329573_cgv308ie10h.js"></script>
 </body>
 </html>
