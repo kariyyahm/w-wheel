@@ -5,7 +5,16 @@
 </template>
 
 <script>
-    export default {}
+    export default {
+        mounted() {
+            for (let node of this.$el.children) {
+                let name = node.nodeName.toLowerCase()
+                if(name !== 'button') {
+                    console.warn(`button-group 的子元素应均为 w-button，不应存在 ${name}`)
+                }
+            }
+        }
+    }
 </script>
 
 <style lang="scss">
