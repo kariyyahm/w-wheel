@@ -1,1 +1,1 @@
-# w-wheel —— 一个 Vue UI 组件
+# w-wheel — 一个 Vue UI 组件
