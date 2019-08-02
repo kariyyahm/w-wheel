@@ -1,12 +1,15 @@
-import Vue from 'vue';
-
-import Button from './Button';
-import Icon from './Icon';
+import Vue from 'vue'
+import Button from './Button'
+import Icon from './Icon'
 import ButtonGroup from './button-group'
-Vue.component('w-button', Button)
+import Input from './Input'
 
+Vue.component('w-button', Button)
 Vue.component('w-icon', Icon)
 Vue.component('button-group', ButtonGroup)
+Vue.component('w-input', Input)
+
+
 new Vue({
     el: '#app',
     data: {
