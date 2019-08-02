@@ -10,8 +10,12 @@
 </template>
 
 <script>
+    import Icon from './Icon'
     export default {
         // props: ['icon', 'iconPosition']
+        components: {
+            'w-icon': Icon
+        },
         props: {
             icon: {},
             loading: {

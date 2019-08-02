@@ -21,8 +21,8 @@ new Vue({
 import chai from 'chai'
 import spies from 'chai-spies'
 chai.use(spies)
-
 const expect = chai.expect
+
 {
     const Constructor = Vue.extend(Button)
     const button = new Constructor({
@@ -39,8 +39,7 @@ const expect = chai.expect
     button.$el.remove()
     button.$destroy()
 }
-
-
+// 测试按钮含有loaidng
 {
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
@@ -59,7 +58,6 @@ const expect = chai.expect
     vm.$el.remove()
     vm.$destroy()
 }
-
 
 {
     // 生成一个div来挂载button里的svg，order才会被渲染
