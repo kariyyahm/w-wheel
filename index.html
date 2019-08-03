@@ -45,26 +45,11 @@
 <body>
 <div id="app">
     <div style="border: 1px solid black;">
-        <w-row gutter="20" align="left">
-            <w-col>1123</w-col>
-            <w-col>2123123</w-col>
-        </w-row>
-        <w-row gutter="20" align="right">
-            <w-col>1123123</w-col>
-            <w-col>22123123</w-col>
-            <w-col>223333</w-col>
-
-        </w-row>
-        <w-row gutter="20" align="center">
-            <w-col span="3">2</w-col>
-            <w-col span="21">3</w-col>
-        </w-row>
         <w-row gutter="20">
-            <w-col span="3">2</w-col>
-            <w-col span="1" offset="4">3</w-col>
-            <w-col span="2" offset="6">3</w-col>
-            <w-col span="8">3</w-col>
-
+            <w-col span="12" :pc="{span:5, offset:0}">1</w-col>
+            <w-col span="10" offset="2" :pc="{span:5, offset:0}">2</w-col>
+            <w-col span="10" offset="2" :pc="{span:5, offset:0}">3</w-col>
+            <w-col span="12" :pc="{span:5, offset:0}">4</w-col>
         </w-row>
     </div>
     <hr>
