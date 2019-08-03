@@ -1,6 +1,8 @@
 <template>
     <div class="wrapper" :class="{'error':error}">
-        <input :value="value" type="text" :disabled="disabled" :readonly="readonly">
+        <input :value="value" type="text" :disabled="disabled" :readonly="readonly"
+        @change="$emit('change', $event)" @input="$emit('input', $event)"
+               @focus="$emit('focus', $event)" @blur="$emit('blur', $event)">
         <template v-if="error">
         <w-icon name="error" class="icon-error"></w-icon>
             <span class="errorMessage">{{error}}</span>
@@ -13,7 +15,9 @@
     import Icon from './Icon'
 export default {
     name: 'WheelInput',
-    components: Icon,
+    components: {
+        'w-icon': Icon
+    },
     props: {
         value: {
             type: String
@@ -29,7 +33,8 @@ export default {
         error: {
             type: String
         }
-    }
+    },
+
 }
 
 </script>
