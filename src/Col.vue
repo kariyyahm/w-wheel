@@ -38,7 +38,6 @@
 <style lang="scss" scoped>
     .col {
         /*background: grey;*/
-        width: 50%;
         /*border: 1px solid red;*/
         $class-prefix: col-;
         @for $n from 1 through 24 {
