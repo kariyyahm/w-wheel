@@ -71,7 +71,9 @@
         </div>
         <div style="margin-top: 20px;">
             <w-input value="王大拿" @change="inputChange"></w-input>
-            <w-input value="王大拿"></w-input>
+            <w-input value="王大拿" v-model="message"></w-input>
+            <p>{{message}}</p>
+            <button @click="message += 1">jiajiajia</button>
             <w-input value="王大拿"></w-input>
         </div>
     </div>
