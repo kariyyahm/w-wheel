@@ -44,6 +44,30 @@
 </head>
 <body>
 <div id="app">
+    <div style="border: 1px solid black;">
+        <w-row gutter="20">
+            <w-col>1</w-col>
+            <w-col>2</w-col>
+        </w-row>
+        <w-row gutter="20">
+            <w-col>1</w-col>
+            <w-col>22</w-col>
+            <w-col>223333</w-col>
+
+        </w-row>
+        <w-row gutter="20">
+            <w-col span="3">2</w-col>
+            <w-col span="21">3</w-col>
+        </w-row>
+        <w-row gutter="20">
+            <w-col span="3">2</w-col>
+            <w-col span="1" offset="4">3</w-col>
+            <w-col span="2" offset="6">3</w-col>
+            <w-col span="8">3</w-col>
+
+        </w-row>
+    </div>
+    <hr>
     <w-button :loading="loading1" @click="loading1 = !loading1">
         按钮
     </w-button>
