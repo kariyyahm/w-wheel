@@ -36,18 +36,7 @@ new Vue({
         message: ''
     },
     created() {
-        this.$toast('朋友，你应该充钱了！！', {
-            closeButton: {
-                text: '老子充过了！！',
-                callback() {
-                    console.log('用户说他充过了啦')
-                }
-            },
-            autoClose: true,
-            autoCloseDelay: 2,
-            enableHTML: true,
-            position: 'top'
-        })
+
 
     },
     methods: {
@@ -55,6 +44,18 @@ new Vue({
             console.log(e)
         },
         showToast() {
+            this.$toast('朋友，你应该充钱了！！', {
+                closeButton: {
+                    text: '老子充过了！！',
+                    callback() {
+                        console.log('用户说他充过了啦')
+                    }
+                },
+                autoClose: true,
+                autoCloseDelay: 2,
+                enableHTML: true,
+                position: 'top'
+            })
         }
     }
 })
@@ -63,6 +64,7 @@ new Vue({
 
 import chai from 'chai'
 import spies from 'chai-spies'
+
 chai.use(spies)
 const expect = chai.expect
 
@@ -155,7 +157,8 @@ const expect = chai.expect
         }
     })
     vm.$mount()
-    let spyA = chai.spy(function(){})
+    let spyA = chai.spy(function () {
+    })
 
     vm.$on('click', spyA)
     let button = vm.$el
