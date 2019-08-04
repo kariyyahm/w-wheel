@@ -10,8 +10,10 @@ import Content from './Content'
 import Header from './Header'
 import Footer from './Footer'
 import Sider from './Sider'
+import Toast from './Toast'
+import Plugin from './plugin'
 
-
+Vue.component('w-toast', Toast)
 Vue.component('w-button', Button)
 Vue.component('w-icon', Icon)
 Vue.component('button-group', ButtonGroup)
@@ -24,7 +26,7 @@ Vue.component('w-header', Header)
 Vue.component('w-footer', Footer)
 Vue.component('w-sider', Sider)
 
-
+Vue.use(Plugin)
 new Vue({
     el: '#app',
     data: {
@@ -33,9 +35,22 @@ new Vue({
         loading3: false,
         message: ''
     },
+    created() {
+        this.$toast('w shi mssssssafo;ak啊实打实的离开家啊啊卢卡斯京东方；绿卡就是的；绿卡就是的；拉开架式地方；绿卡 00000', {
+            // closeButton: {
+            //     text: '知道了',
+            //     callback() {
+            //         console.log('用户说他知道啦')
+            //     }
+            // }
+        })
+
+    },
     methods: {
         inputChange(e) {
             console.log(e)
+        },
+        showToast() {
         }
     }
 })
