@@ -51,8 +51,7 @@ new Vue({
                         console.log('用户说他充过了啦')
                     }
                 },
-                autoClose: true,
-                autoCloseDelay: 2,
+                autoClose: 20,
                 enableHTML: true,
                 position: 'top'
             })
@@ -65,8 +64,7 @@ new Vue({
                         console.log('用户说他充过了啦')
                     }
                 },
-                autoClose: true,
-                autoCloseDelay: 2,
+                autoClose: 2,
                 enableHTML: true,
                 position: 'middle'
             })
@@ -79,8 +77,7 @@ new Vue({
                         console.log('用户说他充过了啦')
                     }
                 },
-                autoClose: true,
-                autoCloseDelay: 2,
+                autoClose: 2,
                 enableHTML: true,
                 position: 'bottom'
             })
