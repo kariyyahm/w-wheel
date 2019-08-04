@@ -1,11 +1,8 @@
 <template>
-    <div>
-        <div class="row" :style="rowStyle" :class="rowClass">
-            <slot></slot>
-        </div>
+    <div class="row" :style="rowStyle" :class="rowClass">
+        <slot></slot>
     </div>
 </template>
-
 <script>
     export default {
         name: 'WheelRow',
@@ -15,35 +12,40 @@
             },
             align: {
                 type: String,
-                validator (val) {
-                    return ['left','right','center',].indexOf(val) >= 0
+                validator (value) {
+                    return ['left', 'right', 'center'].indexOf(value) >= 0
                 }
             }
         },
         computed: {
-            rowStyle() {
+            rowStyle () {
                 let {gutter} = this
-                return {marginLeft:-gutter/2+'px', marginRight:-gutter/2+'px'}
+                return {marginLeft: -gutter / 2 + 'px', marginRight: -gutter / 2 + 'px'}
             },
-            rowClass() {
+            rowClass () {
                 let {align} = this
                 return [align && `align-${align}`]
             }
         },
-        mounted() {
-            this.$children.forEach((vm)=>{
+        mounted () {
+            this.$children.forEach((vm) => {
                 vm.gutter = this.gutter
             })
         }
     }
 </script>
-
-<style lang="scss" scoped>
-    .row {
+<style scoped lang="scss">
+    .row{
         display: flex;
         flex-wrap: wrap;
-        &.align-left {justify-content: flex-start}
-        &.align-center {justify-content: center}
-        &.align-right {justify-content: flex-end}
+        &.align-left {
+            justify-content: flex-start;
+        }
+        &.align-right {
+            justify-content: flex-end;
+        }
+        &.align-center {
+            justify-content: center;
+        }
     }
 </style>

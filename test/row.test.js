@@ -37,18 +37,19 @@ describe('Row', () => {
             vm.$destroy()
         })
     })
-    it('接收align属性.'), ()=>{
+    it('接收align属性.', ()=>{
         const div = document.createElement('div')
         document.body.appendChild(div)
+
         const Constructor = Vue.extend(Row)
         const vm = new Constructor ({
             propsData: {
-                align: 'right'
+                align: 'left'
             }
         }).$mount(div)
         const element = vm.$el
-        expect(getComputedStyle(element).justifyContent).to.eq('flex-end')
-        vm.$destroy
-    }
+        expect(getComputedStyle(element).justifyContent).to.eq('flex-start')
+        vm.$destroy()
+    })
 })
 
