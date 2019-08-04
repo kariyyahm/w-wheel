@@ -43,7 +43,7 @@ new Vue({
         inputChange(e) {
             console.log(e)
         },
-        showToast() {
+        showToast1() {
             this.$toast('朋友，你应该充钱了！！', {
                 closeButton: {
                     text: '老子充过了！！',
@@ -55,6 +55,34 @@ new Vue({
                 autoCloseDelay: 2,
                 enableHTML: true,
                 position: 'top'
+            })
+        },
+        showToast2() {
+            this.$toast('朋友，你应该充钱了！！', {
+                closeButton: {
+                    text: '老子充过了！！',
+                    callback() {
+                        console.log('用户说他充过了啦')
+                    }
+                },
+                autoClose: true,
+                autoCloseDelay: 2,
+                enableHTML: true,
+                position: 'middle'
+            })
+        },
+        showToast3() {
+            this.$toast('朋友，你应该充钱了！！', {
+                closeButton: {
+                    text: '老子充过了！！',
+                    callback() {
+                        console.log('用户说他充过了啦')
+                    }
+                },
+                autoClose: true,
+                autoCloseDelay: 2,
+                enableHTML: true,
+                position: 'bottom'
             })
         }
     }
