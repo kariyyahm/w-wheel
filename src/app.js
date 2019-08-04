@@ -36,13 +36,17 @@ new Vue({
         message: ''
     },
     created() {
-        this.$toast('w shi mssssssafo;ak啊实打实的离开家啊啊卢卡斯京东方；绿卡就是的；绿卡就是的；拉开架式地方；绿卡 00000', {
-            // closeButton: {
-            //     text: '知道了',
-            //     callback() {
-            //         console.log('用户说他知道啦')
-            //     }
-            // }
+        this.$toast('朋友，你应该充钱了！！', {
+            closeButton: {
+                text: '老子充过了！！',
+                callback() {
+                    console.log('用户说他充过了啦')
+                }
+            },
+            autoClose: true,
+            autoCloseDelay: 2,
+            enableHTML: true,
+            position: 'top'
         })
 
     },
