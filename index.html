@@ -42,129 +42,157 @@
         }
     </style>
     <style>
-        .header {background:#999; height:100px;}
-        .content {background: #666}
-        .footer {background: #333; height:100px;}
-        .sider {background: aquamarine; width:200px;}
+        .header {
+            background: #999;
+            height: 100px;
+        }
+
+        .content {
+            background: #666
+        }
+
+        .footer {
+            background: #333;
+            height: 100px;
+        }
+
+        .sider {
+            background: aquamarine;
+            width: 200px;
+        }
     </style>
 </head>
 <body>
 <div id="app">
-        <w-popover position="bottom">
-            <template slot="content">
-                <div>popover内容</div>
-            </template>
-            <w-button>向下</w-button>
-        </w-popover>
-        <w-popover>
-            <template slot="content">
-                <div>popover内容</div>
-            </template>
-            <w-button>向上</w-button>
-        </w-popover>
-        <w-popover position="left">
-            <template slot="content">
-                <div>popover内容</div>
-            </template>
-            <w-button>向左</w-button>
-        </w-popover>
-        <w-popover position="right">
-            <template slot="content">
-                <div>popover内容</div>
-            </template>
-            <w-button>向右</w-button>
-        </w-popover>
-        <w-popover position="bottom" trigger="hover">
-            <template slot="content">
-                <div>popover内容</div>
-            </template>
-            <w-button>下浮</w-button>
-        </w-popover>
-        <w-popover trigger="hover">
-            <template slot="content">
-                <div>popover内容</div>
-            </template>
-            <w-button>上浮</w-button>
-        </w-popover>
+    <div class="collapse-wrapper">
+        <w-collapse :selected.sync="selectedTab" single>
+            <w-collapse-item title="标题1" name="1">第一个内容</w-collapse-item>
+            <w-collapse-item title="标题2" name="2">第二个内容</w-collapse-item>
+            <w-collapse-item title="标题3" name="3">第三个内容</w-collapse-item>
+        </w-collapse>
+        <!--<w-collapse :selected.sync="currentSelected" single>-->
+        <!--<w-collapse-item title="标题1" name="1">第一个内容 </w-collapse-item>-->
+        <!--<w-collapse-item title="标题2" name="2">第二个内容 </w-collapse-item>-->
+        <!--<w-collapse-item title="标题3" name="3">第三个内容 </w-collapse-item>-->
+        <!--</w-collapse>-->
+        <!--</div>-->
+        <!--<w-popover position="bottom">-->
+        <!--<template slot="content">-->
+        <!--<div>popover内容</div>-->
+        <!--</template>-->
+        <!--<w-button>向下</w-button>-->
+        <!--</w-popover>-->
+        <!--<w-popover>-->
+        <!--<template slot="content">-->
+        <!--<div>popover内容</div>-->
+        <!--</template>-->
+        <!--<w-button>向上</w-button>-->
+        <!--</w-popover>-->
+        <!--<w-popover position="left">-->
+        <!--<template slot="content">-->
+        <!--<div>popover内容</div>-->
+        <!--</template>-->
+        <!--<w-button>向左</w-button>-->
+        <!--</w-popover>-->
+        <!--<w-popover position="right">-->
+        <!--<template slot="content">-->
+        <!--<div>popover内容</div>-->
+        <!--</template>-->
+        <!--<w-button>向右</w-button>-->
+        <!--</w-popover>-->
+        <!--<w-popover position="bottom" trigger="hover">-->
+        <!--<template slot="content">-->
+        <!--<div>popover内容</div>-->
+        <!--</template>-->
+        <!--<w-button>下浮</w-button>-->
+        <!--</w-popover>-->
+        <!--<w-popover trigger="hover">-->
+        <!--<template slot="content">-->
+        <!--<div>popover内容</div>-->
+        <!--</template>-->
+        <!--<w-button>上浮</w-button>-->
+        <!--</w-popover>-->
 
 
-    <!--<w-tabs :selected.sync="selectedTab">-->
+        <!--<w-tabs :selected.sync="selectedTab">-->
         <!--<w-tabs-head>-->
-            <!--<w-tabs-item name="woman"><w-icon name="settings"></w-icon>美女</w-tabs-item>-->
-            <!--<w-tabs-item name="caijing" disabled>财经</w-tabs-item>-->
-            <!--<w-tabs-item name="sports">体育</w-tabs-item>-->
-            <!--<template slot="actions"><w-button>设置</w-button></template>-->
+        <!--<w-tabs-item name="woman"><w-icon name="settings"></w-icon>美女</w-tabs-item>-->
+        <!--<w-tabs-item name="caijing" disabled>财经</w-tabs-item>-->
+        <!--<w-tabs-item name="sports">体育</w-tabs-item>-->
+        <!--<template slot="actions"><w-button>设置</w-button></template>-->
         <!--</w-tabs-head>-->
         <!--<w-tabs-body>-->
-            <!--<w-tabs-pane name="woman">美女de neirong</w-tabs-pane>-->
-            <!--<w-tabs-pane name="caijing">财经de neirong</w-tabs-pane>-->
-            <!--<w-tabs-pane name="sports">体育de neirong</w-tabs-pane>-->
+        <!--<w-tabs-pane name="woman">美女de neirong</w-tabs-pane>-->
+        <!--<w-tabs-pane name="caijing">财经de neirong</w-tabs-pane>-->
+        <!--<w-tabs-pane name="sports">体育de neirong</w-tabs-pane>-->
         <!--</w-tabs-body>-->
-    <!--</w-tabs>-->
-    <!--<button @click="showToast1">dian wo shang</button>-->
-    <!--<button @click="showToast2">dian wo zhong</button>-->
-    <!--<button @click="showToast3">dian wo xia</button>-->
+        <!--</w-tabs>-->
+        <!--<button @click="showToast1">dian wo shang</button>-->
+        <!--<button @click="showToast2">dian wo zhong</button>-->
+        <!--<button @click="showToast3">dian wo xia</button>-->
 
 
-    <!--上中下布局-->
-    <!--<w-layout style="height: 100vh">-->
+        <!--上中下布局-->
+        <!--<w-layout style="height: 100vh">-->
         <!--<w-header>header</w-header>-->
         <!--<w-content>content</w-content>-->
         <!--<w-footer>footer</w-footer>-->
-    <!--</w-layout>-->
-    <!--后台管理布局-->
-    <!--<w-layout style="height: 100vh;">-->
+        <!--</w-layout>-->
+        <!--后台管理布局-->
+        <!--<w-layout style="height: 100vh;">-->
         <!--<w-sider>sider</w-sider>-->
         <!--<w-layout>-->
-            <!--<w-header>header</w-header>-->
-            <!--<w-content>content</w-content>-->
-            <!--<w-footer>footer</w-footer>-->
+        <!--<w-header>header</w-header>-->
+        <!--<w-content>content</w-content>-->
+        <!--<w-footer>footer</w-footer>-->
         <!--</w-layout>-->
-    <!--</w-layout>-->
-    <div style="border: 1px solid black; display: none;">
-        <w-row gutter="20" align="right">
-            <w-col span="12" :ipad="{span:20,offset:2}" :pc="{span:2, offset:0}">1</w-col>
-            <w-col span="10" :ipad="{span:20,offset:2}" offset="2" :pc="{span:2, offset:0}">2</w-col>
-            <w-col span="10" :ipad="{span:20,offset:2}" offset="2" :pc="{span:2, offset:0}">3</w-col>
-            <w-col span="12" :ipad="{span:20,offset:2}" :pc="{span:2, offset:0}">4</w-col>
-        </w-row>
+        <!--</w-layout>-->
+        <div style="border: 1px solid black; display: none;">
+            <w-row gutter="20" align="right">
+                <w-col span="12" :ipad="{span:20,offset:2}" :pc="{span:2, offset:0}">1</w-col>
+                <w-col span="10" :ipad="{span:20,offset:2}" offset="2" :pc="{span:2, offset:0}">2</w-col>
+                <w-col span="10" :ipad="{span:20,offset:2}" offset="2" :pc="{span:2, offset:0}">3</w-col>
+                <w-col span="12" :ipad="{span:20,offset:2}" :pc="{span:2, offset:0}">4</w-col>
+            </w-row>
 
-        <hr>
-        <w-button :loading="loading1" @click="loading1 = !loading1">
-            按钮
-        </w-button>
-        <w-button icon="settings"
-                  :loading="loading2" @click="loading2 = !loading2">
-            按钮
-        </w-button>
-        <w-button icon="like" icon-position="right"
-                  :loading="loading3" @click="loading3 = !loading3">
-            按钮
-        </w-button>
-        <button-group>
-            <w-button icon="left">上一页</w-button>
-            <w-button>更多</w-button>
-            <w-button icon="right" icon-position="right">下一页</w-button>
-        </button-group>
-        <div style="margin-top: 60px;">
-            <div style="margin-top: 20px;">
-                <w-input value="王大拿"></w-input>
-                <w-input value="王大拿 disabled" disabled></w-input>
-                <w-input value="王大拿 readonly" readonly></w-input>
-            </div>
-            <div style="margin-top: 20px;">
-                <w-input value="王大拿" error="用户名不少于4个字符"></w-input>
-            </div>
-            <div style="margin-top: 20px;">
-                <w-input value="王大拿" @change="inputChange"></w-input>
-                <w-input value="王大拿" v-model="message"></w-input>
-                <p>{{message}}</p>
-                <button @click="message += 1">jiajiajia</button>
-                <w-input value="王大拿"></w-input>
+            <hr>
+            <w-button :loading="loading1" @click="loading1 = !loading1">
+                按钮
+            </w-button>
+            <w-button icon="settings"
+                      :loading="loading2" @click="loading2 = !loading2">
+                按钮
+            </w-button>
+            <w-button icon="like" icon-position="right"
+                      :loading="loading3" @click="loading3 = !loading3">
+                按钮
+            </w-button>
+            <button-group>
+                <w-button icon="left">上一页</w-button>
+                <w-button>更多</w-button>
+                <w-button icon="right" icon-position="right">下一页</w-button>
+            </button-group>
+            <div style="margin-top: 60px;">
+                <div style="margin-top: 20px;">
+                    <w-input value="王大拿"></w-input>
+                    <w-input value="王大拿 disabled" disabled></w-input>
+                    <w-input value="王大拿 readonly" readonly></w-input>
+                </div>
+                <div style="margin-top: 20px;">
+                    <w-input value="王大拿" error="用户名不少于4个字符"></w-input>
+                </div>
+                <div style="margin-top: 20px;">
+                    <w-input value="王大拿" @change="inputChange"></w-input>
+                    <w-input value="王大拿" v-model="message"></w-input>
+                    <p>{{message}}</p>
+                    <button @click="message += 1">jiajiajia</button>
+                    <w-input value="王大拿"></w-input>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <script src="./src/app.js"></script>
+
 </body>
 </html>
