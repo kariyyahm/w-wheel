@@ -23,7 +23,7 @@
                 required: true
             },
         },
-        computed:{
+        computed: {
             classes() {
                 return {active: this.active}
             }
@@ -35,12 +35,19 @@
         },
         created() {
             this.eventBus.$on('update:selected', (name) => {
-                this.active = name===this.name
+                this.active = name === this.name
             })
         }
     }
 </script>
 
 <style lang="scss" scoped>
-    .tabs-item {flex-shrink:0; padding:0 1em;}
+    .tabs-item {
+        flex-shrink: 0;
+        padding: 0 1em;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
 </style>

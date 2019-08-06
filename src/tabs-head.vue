@@ -22,7 +22,6 @@
         display: flex;
         height: $tabs-height;
         justify-content: flex-start;
-        align-items: center;
         > .action-wrapper {margin-left: auto;}
     }
 </style>
