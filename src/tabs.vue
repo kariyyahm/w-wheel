@@ -28,7 +28,16 @@
             return {eventBus: this.eventBus}
         },
         mounted() {
-            this.eventBus.$emit('update:selected', this.selected)
+            this.$children.forEach((vm) => {
+                if (vm.$options.name === 'WheelTabsHead') {
+                    vm.$children.forEach((childMv) => {
+                        if (childMv.$options.name === 'WheelTabsItem'
+                            && childMv.name === this.selected) {
+                            this.eventBus.$emit('update:selected', this.selected, childMv)
+                        }
+                    })
+                }
+            })
         }
     }
 
