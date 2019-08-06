@@ -50,19 +50,57 @@
 </head>
 <body>
 <div id="app">
-    <w-tabs :selected.sync="selectedTab">
-        <w-tabs-head>
-            <w-tabs-item name="woman"><w-icon name="settings"></w-icon>美女</w-tabs-item>
-            <w-tabs-item name="caijing" disabled>财经</w-tabs-item>
-            <w-tabs-item name="sports">体育</w-tabs-item>
-            <template slot="actions"><w-button>设置</w-button></template>
-        </w-tabs-head>
-        <w-tabs-body>
-            <w-tabs-pane name="woman">美女de neirong</w-tabs-pane>
-            <w-tabs-pane name="caijing">财经de neirong</w-tabs-pane>
-            <w-tabs-pane name="sports">体育de neirong</w-tabs-pane>
-        </w-tabs-body>
-    </w-tabs>
+        <w-popover position="bottom">
+            <template slot="content">
+                <div>popover内容</div>
+            </template>
+            <w-button>向下</w-button>
+        </w-popover>
+        <w-popover>
+            <template slot="content">
+                <div>popover内容</div>
+            </template>
+            <w-button>向上</w-button>
+        </w-popover>
+        <w-popover position="left">
+            <template slot="content">
+                <div>popover内容</div>
+            </template>
+            <w-button>向左</w-button>
+        </w-popover>
+        <w-popover position="right">
+            <template slot="content">
+                <div>popover内容</div>
+            </template>
+            <w-button>向右</w-button>
+        </w-popover>
+        <w-popover position="bottom" trigger="hover">
+            <template slot="content">
+                <div>popover内容</div>
+            </template>
+            <w-button>下浮</w-button>
+        </w-popover>
+        <w-popover trigger="hover">
+            <template slot="content">
+                <div>popover内容</div>
+            </template>
+            <w-button>上浮</w-button>
+        </w-popover>
+
+
+    <!--<w-tabs :selected.sync="selectedTab">-->
+        <!--<w-tabs-head>-->
+            <!--<w-tabs-item name="woman"><w-icon name="settings"></w-icon>美女</w-tabs-item>-->
+            <!--<w-tabs-item name="caijing" disabled>财经</w-tabs-item>-->
+            <!--<w-tabs-item name="sports">体育</w-tabs-item>-->
+            <!--<template slot="actions"><w-button>设置</w-button></template>-->
+        <!--</w-tabs-head>-->
+        <!--<w-tabs-body>-->
+            <!--<w-tabs-pane name="woman">美女de neirong</w-tabs-pane>-->
+            <!--<w-tabs-pane name="caijing">财经de neirong</w-tabs-pane>-->
+            <!--<w-tabs-pane name="sports">体育de neirong</w-tabs-pane>-->
+        <!--</w-tabs-body>-->
+    <!--</w-tabs>-->
     <!--<button @click="showToast1">dian wo shang</button>-->
     <!--<button @click="showToast2">dian wo zhong</button>-->
     <!--<button @click="showToast3">dian wo xia</button>-->

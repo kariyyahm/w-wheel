@@ -17,7 +17,9 @@ import TabsHead from './tabs-head'
 import TabsHeadItem from './tabs-item'
 import TabsBody from './tabs-body'
 import TabsBodyPane from './tabs-pane'
+import Popover from './Popover'
 
+Vue.component('w-popover', Popover)
 Vue.component('w-toast', Toast)
 Vue.component('w-button', Button)
 Vue.component('w-icon', Icon)
