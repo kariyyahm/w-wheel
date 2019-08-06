@@ -28,6 +28,9 @@
             return {eventBus: this.eventBus}
         },
         mounted() {
+            if(this.$children.length === 0) {
+                console && console.log && console.warn('tabs 的子组件需要 tabs-head 和 tabs-body')
+            }
             this.$children.forEach((vm) => {
                 if (vm.$options.name === 'WheelTabsHead') {
                     vm.$children.forEach((childMv) => {
