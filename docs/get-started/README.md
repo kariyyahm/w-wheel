@@ -22,6 +22,6 @@ export default {
     components: {
         'w-button': Button
     }
-}
+} 
 </script>
 ```
