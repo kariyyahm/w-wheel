@@ -10,9 +10,9 @@ title: Button 按钮
 按钮组件，支持添加 icon，设置 icon 位置，加载状态等功能。
 
 组件用例：<br>
-
+<ClientOnly>
 <button-demos></button-demos>
-
+</ClientOnly>
 组件代码：
 
 ```vue

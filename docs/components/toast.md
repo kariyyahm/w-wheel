@@ -10,9 +10,9 @@ title: Toast 弹出式通知
 弹出式通知组件，支持设置弹窗内容(支持HTML格式)、弹窗位置、自动及手动关闭、关闭回调等功能。
 
 组件用例：<br>
-
+<ClientOnly>
 <toast-demos></toast-demos>
-
+</ClientOnly>
 组件代码：
 
 ```vue

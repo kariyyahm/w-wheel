@@ -16,7 +16,8 @@ title: 快速上手
 
 ```vue
 <script>
-import Button from 'w-wheel'
+import {Button} from 'w-wheel'
+import 'w-wheel/dist/index.css'
 
 export default {
     components: {

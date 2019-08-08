@@ -1,4 +1,5 @@
 module.exports = {
+    base: '/w-wheel/',
     title: 'W-Wheel UI',
     description: '好用的 UI 框架',
     themeConfig: {
