@@ -125,6 +125,7 @@
         left: 50%;
         transform: translateX(-50%);
         $animation-duration: 500ms;
+        z-index: 999;
 
         &.position-top {
             top: 0;
@@ -168,7 +169,6 @@
         border-radius: 4px;
         box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
         padding: 0 16px;
-
         .message {
             padding: 8px 0;
         }
@@ -176,6 +176,7 @@
         .close {
             margin-left: 16px;
             flex-shrink: 0;
+            cursor: pointer;
         }
 
 

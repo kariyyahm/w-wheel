@@ -1,17 +1,18 @@
 <template>
-    <div class="toast-wrapper" ref="wrapper">
-        <w-button @click="showToast1">dian wo shang</w-button>
-        <w-button @click="showToast2">dian wo zhong</w-button>
-        <w-button @click="showToast3">dian wo xia</w-button>
-        <w-button @click="showToast4">dian wo xia</w-button>
-        <w-button @click="showToast5">dian wo xia</w-button>
-        <w-button @click="showToast6">dian wo xia</w-button>
+    <div>
+        <div style="margin-bottom: 30px;">
+        <w-button @click="showToast1">顶部通知自动关闭</w-button>
+        <w-button @click="showToast2">中间通知自动关闭</w-button>
+        <w-button @click="showToast3">底部通知自动关闭</w-button>
+        </div>
+        <w-button @click="showToast4">通知手动关闭</w-button>
+        <w-button @click="showToast5">支持 HTML 格式的通知</w-button>
+        <w-button @click="showToast6">关闭通知触发回调</w-button>
     </div>
 </template>
 
 <script>
     import Vue from 'vue'
-    import Toast from '../../../src/Toast'
     import Button from '../../../src/Button'
     import Plugin from '../../../src/plugin'
 
@@ -24,95 +25,64 @@
         methods: {
             showToast1() {
                 this.$toast('3秒后，该通知自动关闭', {
-                    autoClose: false,
-                    enableHTML: true,
+                    autoClose: 3,
                     position: 'top',
                     closeButton: {
-                        text: '',
-                        callback() {
-                            console.log('用户说他充过了啦')
-                        }
+                        text: '关闭'
                     }
-                }, this.$refs.wrapper)
+                })
             },
             showToast2() {
                 this.$toast('3秒后，该通知自动关闭', {
                     autoClose: 3,
-                    enableHTML: true,
                     position: 'middle',
                     closeButton: {
-                        text: '',
-                        callback() {
-                            console.log('用户说他充过了啦')
-                        }
+                        text: '关闭'
                     }
                 })
             },
             showToast3() {
-                this.$toast('朋友，你应该充钱了！！', {
+                this.$toast('3秒后，该通知自动关闭', {
+                    autoClose: 3,
+                    position: 'bottom',
                     closeButton: {
-                        text: '老子充过了！！',
-                        callback() {
-                            console.log('用户说他充过了啦')
-                        }
-                    },
-                    autoClose: 2,
-                    enableHTML: true,
-                    position: 'bottom'
+                        text: '关闭'
+                    }
                 })
             },
             showToast4() {
-                this.$toast('朋友，你应该充钱了！！', {
+                this.$toast('该通知需要您手动关闭', {
+                    autoClose: false,
+                    position: 'middle',
                     closeButton: {
-                        text: '老子充过了！！',
-                        callback() {
-                            console.log('用户说他充过了啦')
-                        }
-                    },
-                    autoClose: 2,
-                    enableHTML: true,
-                    position: 'middle'
+                        text: '关闭'
+                    }
                 })
             },
             showToast5() {
-                this.$toast('朋友，你应该充钱了！！', {
-                    closeButton: {
-                        text: '老子充过了！！',
-                        callback() {
-                            console.log('用户说他充过了啦')
-                        }
-                    },
-                    autoClose: 2,
+                this.$toast('<p style="color: red;">这是一条红色的通知<p>', {
+                    autoClose: false,
                     enableHTML: true,
-                    position: 'bottom'
+                    position: 'middle',
+                    closeButton: {
+                        text: '关闭',
+                    },
+
                 })
             },
             showToast6() {
-                this.$toast('朋友，你应该充钱了！！', {
+                this.$toast('该通知手动关闭后触发回调', {
+                    autoClose: false,
+                    position: 'middle',
                     closeButton: {
-                        text: '老子充过了！！',
+                        text: '关闭',
                         callback() {
-                            console.log('用户说他充过了啦')
+                            alert('我是回调，确认关闭')
                         }
                     },
-                    autoClose: 2,
-                    enableHTML: true,
-                    position: 'bottom'
+
                 })
-            }
+            },
         }
     }
 </script>
-
-<style lang='scss' scoped>
-    .toast-wrapper {
-        padding: 20px;
-        width: 100%;
-        margin: 0 auto;
-        height: 50vh;
-        border: 1px solid #333333;
-        position: relative;
-        overflow: hidden;
-    }
-
-</style>
