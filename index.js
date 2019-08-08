@@ -1,5 +1,24 @@
+
 import Button from './src/Button'
 import Icon from './src/Icon'
 import ButtonGroup from './src/button-group'
+import Input from './src/Input'
+import Col from './src/Col'
+import Row from './src/Row'
+import Layout from './src/Layout'
+import Content from './src/Content'
+import Header from './src/Header'
+import Footer from './src/Footer'
+import Sider from './src/Sider'
+import Toast from './src/Toast'
+import Plugin from './src/plugin'
+import Tabs from './src/tabs'
+import TabsHead from './src/tabs-head'
+import TabsHeadItem from './src/tabs-item'
+import TabsBody from './src/tabs-body'
+import TabsBodyPane from './src/tabs-pane'
+import Popover from './src/Popover'
+import Collapse from './src/collapse'
+import CollapseItem from './src/collapse-item'
 
-export {Button, Icon, ButtonGroup}
+export {Button, Icon, ButtonGroup, Input, Col, Row, Layout, Content, Header, Footer, Sider, Toast, Plugin, Tabs, TabsHead, TabsHeadItem, TabsBody, TabsBodyPane, Popover, Collapse, CollapseItem}
