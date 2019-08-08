@@ -10,18 +10,6 @@
     *, *::before, *::after {box-sizing: border-box;}
     ```
     IE 8 及以上浏览器均支持此样式。
-    你还需要以下样式： 
-    ```
-    :root {
-        --button-height: 32px;
-        --font-size: 14px;
-        --button-background: white;
-        --button-active-background: #eee;
-        --border-radius: 4px;
-        --color: #999;
-        --border-color: #999;
-        --border-color-hover: #666;
-    }
     ```
 2. 安装 w-wheel
     ```
@@ -49,4 +37,6 @@
 
 ## 联系方式
 
-## 贡献代码
+微信：Zakariyyahm <br>
+邮箱：mr_hm@outlook.com 
+
