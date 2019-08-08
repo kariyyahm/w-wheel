@@ -20,7 +20,7 @@ import Button from 'w-wheel'
 
 export default {
     components: {
-        'z-button': Button
+        'w-button': Button
     }
 }
 </script>
