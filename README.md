@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/kariyyahm/w-wheel.svg?branch=master)](https://travis-ci.org/kariyyahm/w-wheel)
 
 ## 介绍
-这是我在学习 Vue 时制作的一个 UI 框架，希望它可以对你有帮助。
+这是我在学习 Vue 时制作的一个 UI 框架，希望它可以对你有帮助。<br>
 1. 添加 css 样式
     使用本框架前，请在 css 中启用 border-box
     ```
@@ -42,7 +42,6 @@
       }
     }
     ```
-## 文档
 
 ## 提问
 

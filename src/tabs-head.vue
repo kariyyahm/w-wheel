@@ -15,8 +15,10 @@
         mounted() {
             this.eventBus.$on('update:selected', (item, vm) => {
                 let {width, left} = vm.$el.getBoundingClientRect()
+                // 找到最左面 item 的 left
+                let {left: left2} = vm.$options.parent.$children[0].$el.getBoundingClientRect()
                 this.$refs.line.style.width = `${width * 0.8}px`
-                this.$refs.line.style.left = `${left + width * 0.1}px`
+                this.$refs.line.style.left = `${left + width * 0.1 - left2}px`
             })
         }
     }
@@ -44,7 +46,7 @@
         > .line {
             position: absolute;
             bottom: 0;
-            border-bottom: 1px solid $color;
+            border-bottom: 2px solid $color;
             transition: all .3s
         }
     }
