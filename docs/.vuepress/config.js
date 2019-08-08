@@ -1,6 +1,6 @@
 module.exports = {
     title: 'W-Wheel UI',
-    description: '一个好用的 UI 框架',
+    description: '好用的 UI 框架',
     themeConfig: {
         nav: [
             {text: '主页', link: '/'},
